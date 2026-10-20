@@ -1,0 +1,13 @@
+case_id,scenario,text,answer,sources,expected_pii,expected_unsupported
+T01,Supported policy claim,,"The policy covers remote workers. [S1]","The policy covers remote workers.",false,false
+T02,Email address,"Contact alex@example.com to discuss the account.","Support can be reached at alex@example.com by email. [S1]","Support can be reached at alex@example.com by email.",true,false
+T03,Telephone number,"Call +1 (415) 555-0132 for help.","Call +1 (415) 555-0132 for help. [S1]","Call +1 (415) 555-0132 for help.",true,false
+T04,Social security number,"SSN: 123-45-6789","The record lists SSN 123-45-6789. [S1]","The record lists SSN 123-45-6789.",true,false
+T05,Unsupported claim,"","Mars is made of chocolate. [S1]","Mars is a rocky planet with a thin atmosphere.",false,true
+T06,Supported paraphrase,"","Mercury is the closest planet to the Sun. [S1]","Mercury is the nearest planet to the Sun.",false,false
+T07,Contextual name,"My name is Alex Johnson.","Alex Johnson submitted the form. [S1]","Alex Johnson submitted the form.",true,false
+T08,Contradictory number,"","Water boils at 50 C at sea level. [S1]","At sea level, water boils at 100 C.",false,true
+T09,Unrelated unsupported claim,"","The company's revenue doubled. [S1]","The office closes at six each evening.",false,true
+T10,High impact topic,"","This medical treatment requires review. [S1]","This medical treatment requires review.",false,false
+T11,Date is not a phone number,"The meeting is on 2025-05-14.","The meeting is on 2025-05-14. [S1]","The meeting is on 2025-05-14.",false,false
+T12,False positive guard,"The reference code is 2222222.","The reference code is 2222222. [S1]","The reference code is 2222222.",false,false

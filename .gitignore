@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.streamlit/secrets.toml
+trustlayer.db
+trustlayer.db-shm
+trustlayer.db-wal
+*.py[cod]
